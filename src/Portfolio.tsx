@@ -44,13 +44,6 @@ const StatusBadge = styled.span`
   margin: 20px 0;
 `;
 
-const ButtonGroup = styled.div`
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-`;
-
 const Section = styled.section<{ $bg?: string }>`
   padding: 80px 20px;
   background: ${(props) => props.$bg || 'white'};
