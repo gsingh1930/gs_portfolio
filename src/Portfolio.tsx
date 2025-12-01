@@ -223,7 +223,7 @@ const ResourceCard = styled.a`
   background: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: inherit;
   text-align: center;
@@ -252,7 +252,7 @@ const SetupCard = styled.div`
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   h3 {
     margin-bottom: 15px;
     color: #007bff;
@@ -332,74 +332,70 @@ const Portfolio = () => {
   ];
 
   const resources = [
-  {
-    title: 'React Docs',
-    icon: '⚛️',
-    summary: 'Official React documentation for learning and reference.',
-    link: 'https://react.dev',
-  },
-  {
-    title: 'TypeScript',
-    icon: '📘',
-    summary: 'TypeScript documentation and handbook.',
-    link: 'https://www.typescriptlang.org/docs/',
-  },
-  {
-    title: 'Styled Components',
-    icon: '🎨',
-    summary: 'CSS-in-JS library for styling React components.',
-    link: 'https://styled-components.com/docs',
-  },
-  {
-    title: 'Docker Docs',
-    icon: '🐳',
-    summary: 'Official Docker documentation for containerization.',
-    link: 'https://docs.docker.com',
-  },
-  {
-    title: 'MDN Web Docs',
-    icon: '🌐',
-    summary: 'Comprehensive web development documentation.',
-    link: 'https://developer.mozilla.org',
-  },
-  {
-    title: 'Stack Overflow',
-    icon: '📚',
-    summary: 'Community Q&A for programming questions.',
-    link: 'https://stackoverflow.com',
-  },
-  {
-    title: 'GitHub',
-    icon: '🐙',
-    summary: 'Version control and code collaboration platform.',
-    link: 'https://github.com',
-  },
-  {
-    title: 'Node.js',
-    icon: '🟢',
-    summary: 'JavaScript runtime documentation.',
-    link: 'https://nodejs.org/docs',
-  },
-];
+    {
+      title: 'React Docs',
+      icon: '⚛️',
+      summary: 'Official React documentation for learning and reference.',
+      link: 'https://react.dev',
+    },
+    {
+      title: 'TypeScript',
+      icon: '📘',
+      summary: 'TypeScript documentation and handbook.',
+      link: 'https://www.typescriptlang.org/docs/',
+    },
+    {
+      title: 'Styled Components',
+      icon: '🎨',
+      summary: 'CSS-in-JS library for styling React components.',
+      link: 'https://styled-components.com/docs',
+    },
+    {
+      title: 'Docker Docs',
+      icon: '🐳',
+      summary: 'Official Docker documentation for containerization.',
+      link: 'https://docs.docker.com',
+    },
+    {
+      title: 'MDN Web Docs',
+      icon: '🌐',
+      summary: 'Comprehensive web development documentation.',
+      link: 'https://developer.mozilla.org',
+    },
+    {
+      title: 'Stack Overflow',
+      icon: '📚',
+      summary: 'Community Q&A for programming questions.',
+      link: 'https://stackoverflow.com',
+    },
+    {
+      title: 'GitHub',
+      icon: '🐙',
+      summary: 'Version control and code collaboration platform.',
+      link: 'https://github.com',
+    },
+    {
+      title: 'Node.js',
+      icon: '🟢',
+      summary: 'JavaScript runtime documentation.',
+      link: 'https://nodejs.org/docs',
+    },
+  ];
 
-const devSetup = {
-  vscode: [
-    'ESLint',
-    'Prettier',
-    'Live Server',
-    'Auto Rename Tag',
-    'Intelli Code',
-    'Code Runner',
-    'Ruby LSP',
-    'Docker',
-  ],
-  terminal: [
-    'Windows PowerShell',
-    'Git Bash',
-    'Node.js & npm',
-  ],
-  font: 'Consolas',
-};
+  const devSetup = {
+    vscode: [
+      'ESLint',
+      'Prettier',
+      'Live Server',
+      'Auto Rename Tag',
+      'Intelli Code',
+      'Code Runner',
+      'Ruby LSP',
+      'Docker',
+    ],
+    terminal: ['Windows PowerShell', 'Git Bash', 'Node.js & npm'],
+    font: 'Consolas',
+  };
 
   return (
     <Container>
@@ -556,52 +552,52 @@ const devSetup = {
       </Section>
 
       {/* Resources */}
-<Section id="resources" $bg="#f8f9fa">
-  <ContentWrapper>
-    <SectionTitle>Resources</SectionTitle>
-    <ResourcesGrid>
-      {resources.map((r, i) => (
-        <ResourceCard key={i} href={r.link} target="_blank">
-          <ResourceIcon>{r.icon}</ResourceIcon>
-          <ResourceTitle>{r.title}</ResourceTitle>
-          <ResourceSummary>{r.summary}</ResourceSummary>
-        </ResourceCard>
-      ))}
-    </ResourcesGrid>
-  </ContentWrapper>
-</Section>
+      <Section id="resources" $bg="#f8f9fa">
+        <ContentWrapper>
+          <SectionTitle>Resources</SectionTitle>
+          <ResourcesGrid>
+            {resources.map((r, i) => (
+              <ResourceCard key={i} href={r.link} target="_blank">
+                <ResourceIcon>{r.icon}</ResourceIcon>
+                <ResourceTitle>{r.title}</ResourceTitle>
+                <ResourceSummary>{r.summary}</ResourceSummary>
+              </ResourceCard>
+            ))}
+          </ResourcesGrid>
+        </ContentWrapper>
+      </Section>
 
-{/* Developer Setup */}
-<Section id="setup">
-  <ContentWrapper>
-    <SectionTitle>Developer Setup</SectionTitle>
-    <Grid3>
-      <SetupCard>
-        <h3>⚙️ VSCode Extensions</h3>
-        <ul>
-          {devSetup.vscode.map((ext, i) => (
-            <li key={i}>{ext}</li>
-          ))}
-        </ul>
-      </SetupCard>
-      <SetupCard>
-        <h3>💻 Terminal Setup</h3>
-        <ul>
-          {devSetup.terminal.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </SetupCard>
-      <SetupCard>
-        <h3>🔤 Editor Font</h3>
-        <p style={{ fontSize: '1.2rem', marginTop: '20px' }}>{devSetup.font}</p>
-        <p style={{ color: '#666', marginTop: '10px' }}>
-          Monospace font with programming ligatures for better code readability.
-        </p>
-      </SetupCard>
-    </Grid3>
-  </ContentWrapper>
-</Section>
+      {/* Developer Setup */}
+      <Section id="setup">
+        <ContentWrapper>
+          <SectionTitle>Developer Setup</SectionTitle>
+          <Grid3>
+            <SetupCard>
+              <h3>⚙️ VSCode Extensions</h3>
+              <ul>
+                {devSetup.vscode.map((ext, i) => (
+                  <li key={i}>{ext}</li>
+                ))}
+              </ul>
+            </SetupCard>
+            <SetupCard>
+              <h3>💻 Terminal Setup</h3>
+              <ul>
+                {devSetup.terminal.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </SetupCard>
+            <SetupCard>
+              <h3>🔤 Editor Font</h3>
+              <p style={{ fontSize: '1.2rem', marginTop: '20px' }}>{devSetup.font}</p>
+              <p style={{ color: '#666', marginTop: '10px' }}>
+                Monospace font with programming ligatures for better code readability.
+              </p>
+            </SetupCard>
+          </Grid3>
+        </ContentWrapper>
+      </Section>
 
       <FooterSection>
         <p>© 2025 Gursharan Singh. All rights reserved.</p>
